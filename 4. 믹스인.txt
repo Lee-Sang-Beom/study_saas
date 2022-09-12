@@ -1,0 +1,99 @@
+1. 믹스인 : 사이트 전체에서 재사용할 스타일 [그룹]을 정의하는 도구
+ - 변수는 재사용할 속성을 정의하는 도구
+
+2. 사용방법 
+ - @mixin 키워드 사용
+ - @include로 호출
+
+'''
+@mixin my-font{
+    font-family: sans-seif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    color: orange;
+}
+
+h1{
+    @include my-font;
+}
+
+p{
+    @include my-font;
+}
+'''
+
+3. 믹스인 인자
+ - 함수에 전달하는 파라미터처럼 사용
+
+'''
+@mixin my-font($font-color, &bg-color: yellow) {
+    font-family: sans-seif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    color: $font-color;
+    background-color: &bg-color;
+}
+
+h1{
+    @include my-font(red); // h1의 배경색은 자동으로 yellow로 적용된다.
+}
+
+p{
+    @include my-font(blue, red);
+}
+'''
+
+4. 코드
+
+> index.html
+
+    <div class="container">
+        <div class="one">1</div>
+        <div class="two">2</div>
+    </div>
+
+
+
+> main.scss
+
+// 여기에 scss구문으로 스타일 시트 작성 시, saas 컴파일러로 이걸 빌드함
+// scss빌드 시, live saas 컴파일러 실행 : 아래 watch saas 클릭 > main.css가 생기면서 빌드한 결과를 볼 수 있다.
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin container-style{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+@mixin box-style($bg-color: gray, $text-color: black){
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    background-color: $bg-color;
+    color: $text-color;
+}
+
+
+.container{
+    @include container-style;
+}
+
+.one{
+    @include box-style(red, white);
+}
+
+.two{
+    @include box-style($text-color:red);
+}

@@ -1,0 +1,93 @@
+1. 단축속성 : 여러 css 속성 값을 함께 지정할 수 있는 속성
+- sass에서는 중첩을 이용해 단축 속성의 하위 속성을 그룹화 할 수 있다.
+- 대표적으로 font
+
+'''
+p{
+    font: {
+        family:sans-serif;
+        size:1em;
+        style: normal;
+        weight: 900;
+    }
+}
+'''
+
+2. 상위 선택자 참조 (&)
+- 기호 &를 활용해 상위 선택자를 참조할 수 있다.
+- 의사 클래스를 선택하고자 할 때 유용한 방법이며, 서로 다른 클래스에서 서로 다른 스타일을 지정할 때도 사용할 수 있다.
+
+'''
+> main.scss
+
+button{
+    &:active{ // 여기서 &는 상위 선택자인 button을 의미
+        background-color:red;
+    }
+
+    &:hover{ // 호버 시, 깔끔한 표현이 가능해진다.
+        color: aqua; 
+    }
+}
+
+> main.css
+
+button:active{
+    background-color:red;
+}
+'''
+
+
+3. 코드 정리
+
+===
+
+> index.html
+
+    <p>테스트를 위해 채워넣은 의미없는 내용</p>
+    <button class="first-btn">
+        1st
+    </button>
+    <button class="second-btn">
+        2nd
+    </button>
+
+===
+
+> main.scss
+
+// 여기에 scss구문으로 스타일 시트 작성 시, saas 컴파일러로 이걸 빌드함
+// scss빌드 시, live saas 컴파일러 실행 : 아래 watch saas 클릭 > main.css가 생기면서 빌드한 결과를 볼 수 있다.
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p{
+    // font-style: italic;
+    // font-weight: 900;
+    // font-size: 32px;
+    font: {
+        style: italic;
+        weight: 900;
+        size: 32px;
+    }
+}
+
+.first-btn{
+    &:active{
+        background-color: aqua;
+        color:white;
+    }
+
+    &:hover{
+        color:white;
+    }
+}
+
+.second-btn:active{
+    background-color: black;
+    color:white;
+}
