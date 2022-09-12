@@ -1,0 +1,67 @@
+<< 문자 보간법 >>
+
+- 문자 자체를 처리하는 방법을 제공
+
+- 만약, html code가 아래와 같다고 하자.
+
+    '''
+        <div class="box">
+            test
+        </div>
+    '''
+
+- 그리고 저 box 문자를 사용하고자 할 때, 
+  css file에서 아래와 같이 사용하려 한다.
+
+    '''
+    $bx : box;
+
+    div.$bx{ // 오류!
+    border:1px solid red;
+    }
+    '''
+
+- 이처럼 string값을 담은 변수를 사용하여, html tag에 접근할 때는 
+  문자 보간법을 사용해야 한다.
+    '''
+
+    $bx : box;
+
+    div.#{$bx}{ // 변수를 #{}로 감싼다.
+        border:1px solid red;
+    }
+
+    '''
+
+- 다음과 같이 @mix, @include와 함께 #{$변수명}으로 활용할 수 있다.
+
+    '''
+
+    [html]
+
+    <div class="box">
+        test
+
+        <p>text</p>
+    </div>
+
+
+    ===
+
+    [sass] 
+
+    @mixin bx($position, $wid, $color){
+        // border-bottom: 1px solid red;
+        border-#{$position} : $wid solid $color;
+    }
+
+    div{
+        background-color: beige;
+        @include bx(bottom, 1px, red);
+    }
+
+    p{
+        @include bx(right, 3px, blue);
+    }
+
+    '''

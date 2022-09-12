@@ -4,13 +4,11 @@
   box-sizing: border-box;
 }
 
-.container ul li {
-  margin-left: 30px;
-  list-style: none;
+div {
+  background-color: beige;
+  border-bottom: 1px solid red;
 }
-.container ul li a {
-  text-decoration: none;
-}
-.container ul li a:hover {
-  color: aqua;
+
+p {
+  border-right: 3px solid blue;
 }/*# sourceMappingURL=main.css.map */
