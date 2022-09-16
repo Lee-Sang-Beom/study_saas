@@ -1,51 +1,21 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.list li {
-  background: no-repeat 0 0/20px auto;
-  text-indent: 30px;
+button:nth-child(1) {
+  color: white;
+  background-color: orange;
+  width: 100px;
 }
-
-.list .ico1 {
-  background-image: url("../bg.jpg");
-  color: red;
+button:nth-child(2) {
+  color: white;
+  background-color: orange;
+  width: 200px;
 }
-.list li:nth-child(1):before {
-  content: "제목 1. ";
-}
-
-.list .ico2 {
-  background-image: url("../bg.jpg");
-  color: red;
-}
-.list li:nth-child(2):before {
-  content: "제목 2. ";
-}
-
-.list .ico3 {
-  background-image: url("../bg.jpg");
-  color: red;
-}
-.list li:nth-child(3):before {
-  content: "제목 3. ";
-}
-
-.list .ico4 {
-  background-image: url("../bg.jpg");
-  color: red;
-}
-.list li:nth-child(4):before {
-  content: "제목 4. ";
-}
-
-.list .ico5 {
-  background-image: url("../bg.jpg");
-  color: red;
-}
-.list li:nth-child(5):before {
-  content: "제목 5. ";
+button:nth-child(3) {
+  color: white;
+  background-color: orange;
+  width: 300px;
 }/*# sourceMappingURL=main.css.map */
