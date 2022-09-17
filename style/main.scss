@@ -4,25 +4,57 @@
     box-sizing: border-box;
 }
 
-$text-white: white;
-$bg-color_tomato:orange;
+%m0auto {
+    width:1200px;
+    margin: 0 auto;
+}
 
-button{
+@mixin test($height) {
+    background-color: rgba(0,0,0,.5); // 반투명하게
+    height: $height;
+}
 
-    // 여기서 &는 상위 선택자인 button을 의미한다. 즉, button:nth-child(1)을 의미
-    &:nth-child(1){
-        color:$text-white;
-        background-color: $bg-color_tomato;
-        width: 100px;
-    }
-    &:nth-child(2){
-        color:$text-white;
-        background-color: $bg-color_tomato;
-        width: 200px;
-    }
-    &:nth-child(3){
-        color:$text-white;
-        background-color: $bg-color_tomato;
-        width: 300px;
+.visual{
+    background-color: pink;
+    height: 300px;
+
+    div{
+
+        
+        @include test(300px);
+        // 이제 반복되지 않게 하기 위해, 미리 저장한 %name을 사용하면 아래와같다.
+        @extend %m0auto;
     }
 }
+
+.main{
+    background-color: purple;
+    height: 500px;
+
+    div{
+        @include test(500px);
+        @extend %m0auto;
+
+    }
+}
+
+.footer{
+    background-color: violet;
+    height: 150px;
+
+    div{
+        @include test(150px);
+        @extend %m0auto;
+    }
+}
+
+/*
+- @extend 키워드 사용한 내용은 아래처럼 묶임. 
+- 나중에 width값이 바뀐다면 관리가 편함
+- 무분별한 남용을 제외하고, 유동적으로 변하지 않을 고정된 요소에 적용하면 좋을 것으로 생각
+
+.footer div, .main div, .visual div {
+    width: 1200px;
+    margin: 0 auto;
+}
+*/
