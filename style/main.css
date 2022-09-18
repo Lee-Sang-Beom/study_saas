@@ -1,49 +1,16 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.footer div, .main div, .visual div {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.visual {
-  background-color: pink;
+div {
+  width: 300px;
   height: 300px;
-}
-.visual div {
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 300px;
-}
-
-.main {
-  background-color: purple;
-  height: 500px;
-}
-.main div {
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 500px;
-}
-
-.footer {
-  background-color: violet;
-  height: 150px;
-}
-.footer div {
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 150px;
-}
-
-/*
-- @extend 키워드 사용한 내용은 아래처럼 묶임. 
-- 나중에 width값이 바뀐다면 관리가 편함
-- 무분별한 남용을 제외하고, 유동적으로 변하지 않을 고정된 요소에 적용하면 좋을 것으로 생각
-
-.footer div, .main div, .visual div {
-    width: 1200px;
-    margin: 0 auto;
-}
-*//*# sourceMappingURL=main.css.map */
+  background-color: #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}/*# sourceMappingURL=main.css.map */
