@@ -4,21 +4,13 @@
   box-sizing: border-box;
 }
 
-.a {
-  background-color: aliceblue;
-  width: 200px;
-  overflow: hidden;
-  display: block;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.b {
-  background-color: aliceblue;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  width: 150px;
-  height: 66px;
+div {
+  background-color: rgb(131, 197, 255);
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  z-index: 3;
+  width: 100px;
+  height: 100px;
+  transform: translateX(-50%);
 }/*# sourceMappingURL=main.css.map */
