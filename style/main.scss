@@ -1,6 +1,6 @@
 // 모듈 불러오기
-@import "mixins.scss";
-@import "var.scss";
+// @import "mixins.scss";
+// @import "var.scss";
 
 *{
     padding: 0;
@@ -8,9 +8,19 @@
     box-sizing: border-box;
 }
 
-.a{
-    // box는 mixins.scss에 있는 믹스인 이름
-    // $main-color는 var.scss에 있는 변수명
-    @include box($main-color);
-    
+%message{
+    padding:8px;
+    text-transform: uppercase;
+    text-align: center;
+    color:#fff;
+    background: #5f0;
+}
+
+.good-message{
+    @extend %message;
+}
+
+.bad-message{
+    @extend %message;
+    background-color: aquamarine;
 }

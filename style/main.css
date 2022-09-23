@@ -4,8 +4,14 @@
   box-sizing: border-box;
 }
 
-.a {
-  width: 100px;
-  height: 100px;
-  background-color: orange;
+.bad-message, .good-message {
+  padding: 8px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background: #5f0;
+}
+
+.bad-message {
+  background-color: aquamarine;
 }/*# sourceMappingURL=main.css.map */
