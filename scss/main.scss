@@ -1,0 +1,44 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+
+@import 'base/base.scss';
+@import 'base/fonts.scss';
+
+@import 'components/bubble.scss';
+@import 'components/preview.scss';
+
+@import 'layout/header.scss';
+@import 'layout/navbar.scss';
+
+@import 'pages/chat.scss';
+@import 'pages/chats.scss';
+@import 'pages/index.scss';
+
+
+$sm-width: 480px;
+$md-width: 768px;
+$lg-width: 1024px;
+
+$width-small: "screen and (max-width: #{$sm-width})";
+$width-medium: "screen and (max-width: #{$md-width})";
+$width-large: "screen and (max-width: #{$lg-width})";
+
+
+
+div{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+
+    @media #{$width-large}{
+        background-color: cadetblue;
+    }
+
+    @media #{$width-medium}{
+        background-color: orange;
+    }
+
+    @media #{$width-small}{
+        background-color: purple;
+    }
+}

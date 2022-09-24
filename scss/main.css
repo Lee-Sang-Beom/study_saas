@@ -1,0 +1,20 @@
+div {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+@media screen and (max-width: 1024px) {
+  div {
+    background-color: cadetblue;
+  }
+}
+@media screen and (max-width: 768px) {
+  div {
+    background-color: orange;
+  }
+}
+@media screen and (max-width: 480px) {
+  div {
+    background-color: purple;
+  }
+}/*# sourceMappingURL=main.css.map */
