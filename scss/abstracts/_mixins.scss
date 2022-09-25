@@ -1,0 +1,6 @@
+@mixin find-account-divide-block{
+    &::after{
+        content:"|";
+        margin: 0 10px;
+    }
+}

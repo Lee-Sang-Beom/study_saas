@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,30 @@
     <title>SCSS_TALK</title>
     <link rel="stylesheet" href="scss/main.css">
 </head>
+
 <body>
-    <div></div>
+    <!-- 로그인 화면-->
+    <div class="login-contanier">
+        <div class="login">
+            <!-- 메인 이미지, 이름 -->
+            <h1 class="login-logo"></h1>
+            <h3 class="login-title">돌핀톡</h3>
+
+            <!-- 로그인 폼 : action 시 페이지 이동 -->
+            <form class="login-form" action="./chats.html">
+                <input type="text" class="login-form-id" placeholder="돌핀계정 (이메일 또는 전화번호)"/>
+                <input type="password" class="login-form-pw" placeholder="비밀번호"/>
+                <input type="submit" class="login-form-btn" value="로그인"/>
+            </form>
+
+            <!-- 회원정보 찾기 및 회원 가입 -->
+            <div class="login-find">
+                <p class="login_find_account"> 계정 찾기 </p>
+                <p class="login_find_account"> 비밀번호 찾기 </p>
+                <p class="login_find_account"> 회원 가입 </p>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

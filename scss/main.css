@@ -1,20 +1,102 @@
-div {
+* {
+  font-family: "NanumBarunpen";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  min-width: 300px;
+  height: 100vh;
+}
+
+@font-face {
+  font-family: "NanumBarunpen";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.login-contanier {
+  width: 100%;
+  height: 100%;
+  background-color: #00d8e7;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 500px;
+  text-align: center;
+}
+.login .login-logo {
   width: 100px;
   height: 100px;
-  background-color: black;
+  background-image: url(../../img/logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
 }
-@media screen and (max-width: 1024px) {
-  div {
-    background-color: cadetblue;
-  }
+.login .login-title {
+  padding: 15px 0;
+  font-size: 1.4rem;
 }
-@media screen and (max-width: 768px) {
-  div {
-    background-color: orange;
-  }
+.login .login-find {
+  display: flex;
+  justify-content: center;
 }
-@media screen and (max-width: 480px) {
-  div {
-    background-color: purple;
-  }
+.login .login-find .login_find_account {
+  margin-top: 20px;
+  font-size: 0.75em;
+}
+.login .login-find .login_find_account:nth-child(1)::after {
+  content: "|";
+  margin: 0 10px;
+}
+.login .login-find .login_find_account:nth-child(2)::after {
+  content: "|";
+  margin: 0 10px;
+}
+.login .login-form {
+  min-width: 240px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login .login-form input {
+  width: 240px;
+  height: 40px;
+  border: 1px solid #bdbdbd;
+  font-size: 0.75em;
+  text-align: center;
+}
+.login .login-form input:focus {
+  outline: none;
+}
+.login .login-form .login-form-id {
+  border-bottom: 0;
+  border-radius: 5px 5px 0 0;
+}
+.login .login-form .login-form-pw {
+  border-radius: 0 0 5px 5px;
+}
+.login .login-form .login-form-btn {
+  margin-top: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #00579e;
+  background-color: #2f55fd;
+  color: white;
+  transition: background-color 0.25s ease-in-out;
+}
+.login .login-form .login-form-btn:hover {
+  background-color: #0025ca;
 }/*# sourceMappingURL=main.css.map */
