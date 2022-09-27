@@ -1,0 +1,24 @@
+.chats{
+    // navbar width: 60px만큼 margin부여
+
+    margin-left: 60px;
+
+    .previews{
+        .preview-list{
+            a{
+                
+                text-decoration: none;
+                color: #000;
+                .preview{
+                    &:hover{
+                        background-color: #dbdbdb;
+                    }
+                }
+            }
+
+        }
+
+        
+    }
+}
+

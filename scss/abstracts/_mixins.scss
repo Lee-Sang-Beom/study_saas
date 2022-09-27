@@ -4,3 +4,9 @@
         margin: 0 10px;
     }
 }
+
+@mixin set-boxSize($h, $w:100%, $br:0){
+    height: $h;
+    width: $w;
+    border-radius: $br;
+}

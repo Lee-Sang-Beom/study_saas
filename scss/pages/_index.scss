@@ -1,6 +1,5 @@
 .login-contanier{
-    width: 100%;
-    height: 100%;
+    @include set-boxSize(100%,100%);
     background-color: $bg-color;
 }
 
@@ -16,8 +15,7 @@
 
     // logo img
     .login-logo{
-        width: 100px;
-        height: 100px;
+        @include set-boxSize(100px, 100px);
         background: {
             image: url(../../img/logo.png);
             position:center;
@@ -59,8 +57,7 @@
         justify-content: center;
 
         input{
-            width: 240px;
-            height: 40px;
+            @include set-boxSize(40px, 240px);
             border: 1px solid #bdbdbd;
             font-size: 0.75em;
             text-align: center;

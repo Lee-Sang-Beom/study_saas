@@ -2,9 +2,8 @@
     position: fixed;
     top:0;
     left:0;
-    min-width: 50px;
-    width: 8%;
-    height: 100%;
+    min-width: 60px;
+    @include set-boxSize(100%, 60px);
     background-color: aliceblue;
     list-style-type: none;
 
