@@ -1,7 +1,7 @@
 .header{
     // chats 자체가 chats.scss에서 marginleft를 60px만큼 줬기에 오른쪽이 잘리지 않도록 함
     width: calc(100% - 60px);
-
+    min-width: 300px; 
     // 영역 고정
     position: fixed;
     top:0;

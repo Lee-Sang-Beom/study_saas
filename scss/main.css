@@ -30,18 +30,21 @@ body {
 .preview:first-child {
   top: 68px;
 }
-.preview .preview-column .preview-pic {
+.preview .preview-column-left .preview-pic {
   height: 50px;
   width: 50px;
   border-radius: 18px;
   background-color: #2f55fd;
   margin-right: 1rem;
 }
-.preview .preview-column .preview-nick {
+.preview .preview-column-right {
+  width: calc(100% - 50px - 1rem);
+}
+.preview .preview-column-right .preview-nick {
   font-size: 1rem;
   font-weight: 800;
 }
-.preview .preview-column .preview-message {
+.preview .preview-column-right .preview-message {
   overflow: hidden;
   width: 80%;
   display: -webkit-box;
@@ -49,23 +52,26 @@ body {
   -webkit-box-orient: vertical;
   font-size: 0.8rem;
 }
+.preview .preview-column-right .preview-message p {
+  width: 100%;
+}
 @media screen and (max-width: 500px) {
-  .preview .preview-column .preview-message {
+  .preview .preview-column-right .preview-message {
     width: 75%;
   }
 }
 @media screen and (max-width: 400px) {
-  .preview .preview-column .preview-message {
+  .preview .preview-column-right .preview-message {
     width: 60%;
   }
 }
-.preview .preview-column .preview-time {
+.preview .preview-column-right .preview-time {
   position: absolute;
   top: 2rem;
   right: 1.4rem;
   font-size: 0.7rem;
 }
-.preview .preview-column .preview-new {
+.preview .preview-column-right .preview-new {
   position: absolute;
   top: 3.5rem;
   right: 1.4rem;
@@ -80,6 +86,7 @@ body {
 
 .header {
   width: calc(100% - 60px);
+  min-width: 300px;
   position: fixed;
   top: 0;
   z-index: 2;
