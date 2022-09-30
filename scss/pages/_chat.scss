@@ -1,0 +1,72 @@
+.chat{
+    @include set-boxSize(100%,100%);
+    background-color: $main-color;
+
+    .chat-screen{
+        // 말풍선들이 넘칠 경우, 스크롤 효과
+        overflow: auto;
+
+        // 100% - 입력 폼 높이(160px)만큼 뺀 것이 말풍선 영역
+        height: calc(100% - 160px);
+
+        .chat-screen-bar{
+            position: sticky;
+            top:0;
+            z-index:5;
+        }
+
+        .chat-screen-bubbles{
+            padding-top: 1rem;
+            list-style-type: none;
+        }
+    }
+}
+
+.chat-user {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 16px;
+    background-color: #fff;
+
+    .preview-column-left {
+
+        .preview-pic {
+            @include set-boxSize(50px, 50px, 18px);
+            background-color: $main-color;
+            margin-right: 1rem;
+        }
+
+
+    }
+
+    .preview-column-right {
+        width: calc(100% - 50px - 1rem);
+
+        .preview-nick {
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+        .preview-message {
+            overflow: hidden;
+            width: 80%;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            font-size: 0.8rem;
+
+            p {
+                width: 100%;
+            }
+
+            @media screen and (max-width:500px) {
+                width: 75%;
+            }
+
+            @media screen and (max-width:400px) {
+                width: 60%;
+            }
+        }
+    }
+}

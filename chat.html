@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SCSS_TALK</title>
+    <link rel="stylesheet" href="scss/main.css">
+    <link href="img/logo.png" ref="icon">
 </head>
+
 <body>
-    
+    <div class="chat">
+        <main class="chat-screen">
+            <!-- 채팅방 정보(프로필) -->
+            <section class="chat-screen-bar">
+                    <div class="chat-user">
+                        <div class="preview-column-left">
+                            <div class="preview-pic"></div>
+                        </div>
+                        <div class="preview-column-right">
+                            <p class="preview-nick">친구</p>
+                            <p class="preview-message">
+                                <i class="fas fa-user">2</i>
+                            </p>
+                        </div>
+                    </div>
+            </section>
+
+            <!-- 채팅방 내용 -->
+            <ul class="chat-screen-bubbles">
+                <!-- components/bubble.scss -->
+                <li class="bubble">말풍선 내용</li>
+                <li class="bubble">말풍선 내용</li>
+                <li class="bubble">말풍선 내용</li>
+                <li class="bubble">말풍선 내용</li>
+                <li class="bubble">말풍선 내용</li>
+                <li class="bubble">말풍선 내용</li>
+                <li class="bubble">말풍선 내용</li>
+                <li class="bubble">말풍선 내용</li>
+                <li class="bubble">말풍선 내용</li>
+            </ul>
+        </main>
+    </div>
+    <script src="https://kit.fontawesome.com/54f9e9c75a.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
