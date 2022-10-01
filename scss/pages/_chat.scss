@@ -70,3 +70,44 @@
         }
     }
 }
+
+.chat-form{
+    height: 160px;
+    background-color: #f2f2f2;
+    .chat-form-plugin{
+        height: 40px; // 아이콘이 포함된박스높이
+        
+        .chat-form__icon{
+            line-height: 40px; // 아이콘이 포함된 박스에서의 아이콘 세로정렬
+            margin-left: 15px;
+        }
+    }
+
+    .chat-form-field{
+        height:120px;
+        display: flex;
+
+        .chat-form-msg{
+            @include set-boxSize(100%, calc(100% - 120px));
+            border:none;
+            resize:none;
+            &:focus{
+                outline:none;
+            }
+        }
+
+        .chat-form-btn{
+            @include set-boxSize(100%, 120px, 20px);
+            background-color: #b6b6b6;
+            border: 1px solid #dbdbdb;
+
+            &:hover{
+                background-color: $hover-color;
+                color:white;
+            }
+            
+        }
+        
+    }
+}
+

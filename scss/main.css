@@ -222,6 +222,43 @@ body {
   }
 }
 
+.chat-form {
+  height: 160px;
+  background-color: #f2f2f2;
+}
+.chat-form .chat-form-plugin {
+  height: 40px;
+}
+.chat-form .chat-form-plugin .chat-form__icon {
+  line-height: 40px;
+  margin-left: 15px;
+}
+.chat-form .chat-form-field {
+  height: 120px;
+  display: flex;
+}
+.chat-form .chat-form-field .chat-form-msg {
+  height: 100%;
+  width: calc(100% - 120px);
+  border-radius: 0;
+  border: none;
+  resize: none;
+}
+.chat-form .chat-form-field .chat-form-msg:focus {
+  outline: none;
+}
+.chat-form .chat-form-field .chat-form-btn {
+  height: 100%;
+  width: 120px;
+  border-radius: 20px;
+  background-color: #b6b6b6;
+  border: 1px solid #dbdbdb;
+}
+.chat-form .chat-form-field .chat-form-btn:hover {
+  background-color: #0025ca;
+  color: white;
+}
+
 .chats {
   margin-left: 60px;
 }
