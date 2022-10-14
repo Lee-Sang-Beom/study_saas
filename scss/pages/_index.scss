@@ -16,9 +16,8 @@
     // logo img
     .login-logo{
         @include set-boxSize(100px, 100px);
-        background-image: url("../../img/logo-removebg.png");
         background: {
-            
+            image: url("./img/logo.png");
             position:center;
             repeat:no-repeat;
             // 이미지 좌우 상하 라고 생각
