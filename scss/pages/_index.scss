@@ -17,12 +17,12 @@
     .login-logo{
         @include set-boxSize(100px, 100px);
         background: {
-            image: url("./img/logo.png");
             position:center;
             repeat:no-repeat;
             // 이미지 좌우 상하 라고 생각
             size: auto 100%;
         };
+        background-image: url(../../img/logo.png);
     }
 
     .login-title{

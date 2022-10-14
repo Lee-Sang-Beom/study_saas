@@ -290,10 +290,10 @@ body {
   height: 100px;
   width: 100px;
   border-radius: 0;
-  background-image: url("./img/logo.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto 100%;
+  background-image: url(../../img/logo.png);
 }
 .login .login-title {
   padding: 15px 0;
